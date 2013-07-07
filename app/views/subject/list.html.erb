@@ -1,0 +1,16 @@
+<h1>Listing Subjects</h1>
+<ul id="subject_list">
+<% @subjects.each do |c| %>
+<li><%= link_to c.name, :action => 'show', :id => c.id %>
+<%= "(#{c.books.count})" -%></li>
+<% end %>
+</ul>
+<p id="add_link"><%= link_to_function("Add a Subject",
+"Element.remove('add_link'); Element.show('add_subject')")%>
+</p>
+
+<div id="add_subject" style="display:none;">
+<%= form_tag({:action => 'create'}, :remote => "true")%>
+Name: <%= text_field "subject", "name" %>
+<%= submit_tag 'Add' %>
+</div>

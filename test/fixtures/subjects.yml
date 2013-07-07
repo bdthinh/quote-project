@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  subject_id: 
+  names: MyString
+  time-in: 2013-07-02 22:33:10
+  time-up: 2013-07-02 22:33:10
+
+two:
+  subject_id: 
+  names: MyString
+  time-in: 2013-07-02 22:33:10
+  time-up: 2013-07-02 22:33:10

@@ -1,0 +1,10 @@
+- if @books.blank?
+  %p There are not any books currently in the system.
+- else
+  %p These are the current books in our system
+  %ul#books
+    - @books.each do |c|
+      %li= link_to c.title, {:action => 'show', :id => c.id}
+%p= link_to "Add new Book", {:action => 'new'}
+%p= link_to "Say hello", say_hello_path
+%p= link_to "Say goodbye",say_goodbye_path
